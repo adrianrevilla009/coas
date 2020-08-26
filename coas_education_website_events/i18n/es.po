@@ -1,0 +1,193 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* coas_education_website_events
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-25 13:09+0000\n"
+"PO-Revision-Date: 2020-06-25 13:09+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.add_menu_meetings_item_
+msgid "<i class=\"fa fa-group\"/>\n"
+"     <span class=\"sm-link__label\">Meetings</span>"
+msgstr "<i class=\"fa fa-group\"/>\n"
+"     <span class=\"sm-link__label\">Reuniones</span>"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.add_menu_meetings_item
+msgid "<i class=\"fa fa-puzzle-piece\"/>\n"
+"     <span class=\"sm-link__label\">Events</span>"
+msgstr "<i class=\"fa fa-puzzle-piece\"/>\n"
+"     <span class=\"sm-link__label\">Eventos</span>"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "All meetings"
+msgstr "Todas las reuniones"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "Apr"
+msgstr "Abr"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "Aug"
+msgstr "Ago"
+
+#. module: coas_education_website_events
+#: model:ir.model.fields,field_description:coas_education_website_events.field_event_event__course_id
+msgid "Course"
+msgstr "Curso"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "Dec"
+msgstr "Dic"
+
+#. module: coas_education_website_events
+#: model:ir.model.fields,field_description:coas_education_website_events.field_event_event__group_id
+msgid "Education Group"
+msgstr "Grupo educativo"
+
+#. module: coas_education_website_events
+#: model:ir.model.fields,field_description:coas_education_website_events.field_event_event__level_id
+msgid "Education Level"
+msgstr "Nivel educativo"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.event_event_view_form
+msgid "Education data"
+msgstr "Datos educativos"
+
+#. module: coas_education_website_events
+#: model:ir.model,name:coas_education_website_events.model_calendar_event
+#: model:ir.model,name:coas_education_website_events.model_event_event
+msgid "Event"
+msgstr "Evento"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.add_menu_meetings_item
+msgid "Events"
+msgstr "Eventos"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "Feb"
+msgstr "Feb"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "Fri"
+msgstr "Vie"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "Index"
+msgstr "Indice"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "Jan"
+msgstr "Ene"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "Jul"
+msgstr "Jul"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "Jump To:"
+msgstr "Saltar a:"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "Jun"
+msgstr "Jun"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "Mar"
+msgstr "Mar"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "May"
+msgstr "May"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.add_menu_meetings_item_
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "Meetings"
+msgstr "Reuniones"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "Mon"
+msgstr "Lun"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "Next"
+msgstr "Siguiente"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "No events found"
+msgstr "No se han encontrado eventos"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "Nov"
+msgstr "Nov"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "Oct"
+msgstr "Oct"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "Previous"
+msgstr "Anterior"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "Sat"
+msgstr "Sáb"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "Sep"
+msgstr "Sep"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "Sun"
+msgstr "Dom"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "Thu"
+msgstr "Jue"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "Tue"
+msgstr "Mar"
+
+#. module: coas_education_website_events
+#: model_terms:ir.ui.view,arch_db:coas_education_website_events.coas_events_layout
+msgid "Wed"
+msgstr "Mié"
+

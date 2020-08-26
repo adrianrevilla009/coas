@@ -1,0 +1,43 @@
+#timetable_hours {
+	float: left;
+	width: 100%;
+}
+
+.timetable_event {
+	width: 100%;
+	line-height: normal;
+}
+
+#calendar td {
+	padding: 0;
+	padding-bottom: 0.25rem;
+}
+
+#nav_panel {
+	background-color: #e9ecef;
+	padding-right: 0;
+	padding-left: 0;
+	border-radius: 5px;
+}
+
+#nav_panel_calendar {
+	float: left;
+	border-radius: 5px;
+}
+
+#nav_panel_agenda {
+	float: right;
+	border-radius: 5px;
+}
+
+#nav_panel a {
+	text-decoration: none;
+}
+
+#nav_panel a:hover {
+	color: #005452;
+}
+
+#nav_icon_calendar, #nav_icon_agenda {
+	color: #00A09D;
+}

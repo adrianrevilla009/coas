@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+ <template id="assets_frontend"
+  inherit_id="website.assets_frontend" name="Adding files">
+  <xpath expr="." position="inside">
+   <script type="text/javascript"
+    src="/coas_education_website_contacts/static/src/js/website.js"></script>
+   <link rel="stylesheet"
+    href="/coas_education_website_contacts/static/src/css/style.css" />
+   <script type="text/javascript"
+    src="/coas_education_website_main/static/src/js/common.js"></script>
+  </xpath>
+ </template>
+
+ <template id="add_menu_contacts_item"
+  inherit_id="coas_education_website_main.coas_main_layout"
+  name="Adding contacts">
+  <xpath expr="//div[@id='middle_column']/div[1]/div[2]"
+   position="inside">
+   <t t-if="selected_kid">
+    <a
+     class="list-group-item list-group-item-action d-flex align-items-center justify-content-between sm-link sm-link_text sm-link7"
+     t-attf-href="/contacts/{{selected_kid.id}}"
+     title="Subjects / Contacts">
+     <i class="fa fa-envelope"></i>
+     <span class="sm-link__label">Subjects / Contacts</span>
+     <span class="badge badge-secondary badge-pill">
+      <t t-esc="number_of_contacts" />
+     </span>
+    </a>
+   </t>
+   <t t-else="">
+    <a
+     class="list-group-item list-group-item-action d-flex align-items-center justify-content-between sm-link sm-link_text sm-link7"
+     t-attf-href="/contacts/all" title="Subjects / Contacts">
+     <i class="fa fa-envelope"></i>
+     <span class="sm-link__label">Subjects / Contacts</span>
+     <span class="badge badge-secondary badge-pill">
+      <t t-esc="number_of_contacts" />
+     </span>
+    </a>
+   </t>
+  </xpath>
+ </template>
+
+ <template id="coas_contacts_layout" name="Contacts Layout">
+  <t t-call="website.layout">
+   <xpath expr="//div[@id='wrap']" position="replace">
+    <div class="oe_structure"
+     id="oe_structure_website_event_index_1" />
+    <div class="container">
+     <!-- Browser -->
+     <div class="row mt8">
+      <div class="col-md-12">
+       <ol class="breadcrumb mb0">
+        <t t-if="selected_kid">
+         <li class="breadcrumb-item">
+          <a t-attf-href="/">Index</a>
+         </li>
+         <li class="breadcrumb-item">
+          <a t-attf-href="/main/{{selected_kid.id}}">Contacts</a>
+         </li>
+         <li t-if="selected_kid" class="breadcrumb-item">
+          <t t-esc="selected_kid.name" />
+         </li>
+        </t>
+        <t t-else="">
+         <li class="breadcrumb-item">
+          <a t-attf-href="/">Index</a>
+         </li>
+         <li class="breadcrumb-item">
+          <a t-attf-href="/main">Contacts</a>
+         </li>
+         <li class="breadcrumb-item">All contacts</li>
+        </t>
+       </ol>
+      </div>
+     </div>
+     <div class="row mt32 mb32">
+      <!-- Left column -->
+      <div class="col-lg-3 css_noprint" id="left_column">
+       <ul class="nav nav-pills flex-column" id="kid_list">
+        <t t-foreach="kids" t-as="kid">
+         <li class="nav-item">
+          <a t-attf-href="/contacts/{{kid.id}}"
+           t-attf-class="nav-link">
+           <i class="fa fa-user" style="margin-right: 5px;"></i>
+           <t t-esc="kid.name" />
+           <span class="badge badge-pill float-right"
+            style="display: none;">
+            <t t-esc="kid.id" />
+           </span>
+          </a>
+         </li>
+        </t>
+       </ul>
+      </div>
+      <!-- Central column -->
+      <div class="col-lg-9" id="middle_column">
+       <t t-if="selected_kid">
+        <div class="text-center text-muted" t-if="not report_ids">
+         <h1>No contacts found</h1>
+        </div>
+        <div class="text-center text-muted" t-else="">
+         <div class="container">
+          <div class="panel panel-default">
+           <div class="panel-body">
+            <div id="kid_contacts_data_body">
+
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </t>
+       <t t-else="">
+        <div class="text-center text-muted"
+         t-if="total_reports == '0'">
+         <h1>No contacts found for all of your kids</h1>
+        </div>
+        <div class="text-center text-muted" t-else="">
+         <div class="container">
+          <div class="panel panel-default">
+           <div class="panel-body">
+            <div id="allkid_contacts_data_body">
+
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </t>
+      </div>
+      <t t-if="selected_kid">
+       <div id="datos_ocultos" style="display: none;">
+        <p class="report_data" id="r_data_6">
+         <t t-esc="selected_kid.name" />
+        </p>
+        <img
+         t-att-src="'/web/image/res.partner/%s/image' % selected_kid.id"
+         id="r_data_17" />
+        <p class="report_data" id="r_data_5">
+         <t t-esc="number_rows" />
+        </p>
+        <ul>
+         <t t-foreach="report_ids" t-as="report">
+          <t t-if="report.teacher_id and report.subject_id"> <!-- and report.course_id -->
+           <li>
+            <p class="report_data" id="r_data_0">
+             <t t-esc="report.teacher_id.name " />
+            </p>
+            <p class="report_data" id="r_data_1">
+             <t t-esc="report.subject_id.display_name " />
+            </p>
+            <p class="report_data" id="r_data_2">
+             <t t-esc="report.course_id.display_name " />
+            </p>
+            <p class="report_data" id="r_data_3">
+             <t t-esc="report.teacher_id.work_email " />
+            </p>
+            <img
+             t-att-src="'/web/image/hr.employee/%s/image' % report.teacher_id.id"
+             width="96" height="65" id="r_data_4" />
+           </li>
+          </t>
+         </t>
+        </ul>
+       </div>
+      </t>
+      <t t-else="">
+       <div id="datos_ocultos_2" style="display: none;">
+        <ul>
+         <t t-foreach="report_ids" t-as="report1">
+          <t t-foreach="report1" t-as="report">
+           <t t-if="report.teacher_id and report.subject_id"> <!-- and report.course_id" -->
+            <li>
+             <p class="report_data" id="r_data_7">
+              <t t-esc="report.teacher_id.name " />
+             </p>
+             <p class="report_data" id="r_data_8">
+              <t t-esc="report.subject_id.display_name " />
+             </p>
+             <p class="report_data" id="r_data_9">
+              <t t-esc="report.course_id.display_name " />
+             </p>
+             <p class="report_data" id="r_data_10">
+              <t t-esc="report.teacher_id.work_email " />
+             </p>
+             <img
+              t-att-src="'/web/image/hr.employee/%s/image' % report.teacher_id.id"
+              width="96" height="65" id="r_data_11" />
+            </li>
+           </t>
+          </t>
+         </t>
+        </ul>
+        <ul>
+         <t t-foreach="kids" t-as="kid">
+          <li>
+           <p class="report_data" id="r_data_12">
+            <t t-esc="kid.name " />
+           </p>
+           <img
+            t-att-src="'/web/image/res.partner/%s/image' % kid.id"
+            id="r_data_16" />
+          </li>
+         </t>
+        </ul>
+        <ul>
+         <t t-foreach="n_rows" t-as="number_rows">
+          <li>
+           <p class="report_data" id="r_data_13">
+            <t t-esc="number_rows " />
+           </p>
+          </li>
+         </t>
+        </ul>
+        <ul>
+         <t t-foreach="n_reports" t-as="number_reports">
+          <li>
+           <p class="report_data" id="r_data_14">
+            <t t-esc="number_reports " />
+           </p>
+          </li>
+         </t>
+        </ul>
+        <p class="report_data" id="r_data_15">
+         <t t-esc="total_reports " />
+        </p>
+       </div>
+      </t>
+     </div>
+    </div>
+   </xpath>
+  </t>
+ </template>
+
+</odoo>

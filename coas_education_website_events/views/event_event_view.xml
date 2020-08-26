@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="event_event_view_form" model="ir.ui.view">
+        <field name="model">event.event</field>
+        <field name="inherit_id" ref="event.view_event_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Education data" name="event_education_page">
+                    <group name="event_education_data">
+                        <group>
+                            <field name="level_id"/>
+                            <field name="course_id"/>
+                            <field name="group_id"/>
+                        </group>
+                        <group />
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+ <template id="assets_frontend2"
+  inherit_id="website.assets_frontend" name="Adding files">
+  <xpath expr="." position="inside">
+   <script type="text/javascript"
+    src="/coas_education_website_events/static/src/js/website_.js"></script>
+  </xpath>
+ </template>
+
+ <template id="add_menu_meetings_item"
+  inherit_id="coas_education_website_main.coas_main_layout"
+  name="Adding meetings">
+  <xpath expr="//div[@id='middle_column']/div[1]/div[2]"
+   position="inside">
+   <t t-if="selected_kid">
+    <a
+     class="list-group-item list-group-item-action d-flex align-items-center justify-content-between sm-link sm-link_text sm-link7"
+     t-attf-href="/event" title="Events">
+     <i class="fa fa-puzzle-piece"></i>
+     <span class="sm-link__label">Events</span>
+     <span class="badge badge-secondary badge-pill">
+      <t t-esc="number_of_events2" />
+     </span>
+    </a>
+   </t>
+   <t t-else="">
+    <a
+     class="list-group-item list-group-item-action d-flex align-items-center justify-content-between sm-link sm-link_text sm-link7"
+     t-attf-href="/event" title="Events">
+     <i class="fa fa-puzzle-piece"></i>
+     <span class="sm-link__label">Events</span>
+     <span class="badge badge-secondary badge-pill">
+      <t t-esc="number_of_events2" />
+     </span>
+    </a>
+   </t>
+  </xpath>
+ </template>
+
+ <template id="education_calendar_website_event_template"
+  inherit_id="website_event.index">
+  <xpath expr="//div[@id='oe_structure_website_event_index_1']"
+   position="inside">
+   <div id="website_calendar_events" style="display: none;">
+    <ul>
+     <t t-foreach="event_ids" t-as="event">
+      <li>
+       <p class="website_event_data" id="e_data_1">
+        <t t-esc="event.id" />
+       </p>
+       <ul>
+        <t t-foreach="event.registration_ids" t-as="participant">
+         <li>
+          <p class="website_event_data" id="e_data_2">
+           <t t-esc="participant.partner_id.id" />
+          </p>
+          <p class="website_event_data" id="e_data_3">
+           <t t-esc="participant.partner_id.name" />
+          </p>
+         </li>
+        </t>
+       </ul>
+       <p class="website_event_data" id="e_data_4">
+        <t t-esc="event.course_id.display_name" />
+       </p>
+       <p class="website_event_data" id="e_data_5">
+        <t t-esc="event.level_id.display_name" />
+       </p>
+       <p class="website_event_data" id="e_data_6">
+        <t t-esc="event.group_id.display_name" />
+       </p>
+       <p class="website_event_data" id="e_data_7">
+        <t t-esc="event.name" />
+       </p>
+       <p class="website_event_data" id="e_data_8">
+        <t t-esc="event.is_participating" />
+       </p>
+       <p class="website_event_data" id="e_data_9">
+        <t t-esc="event.is_online" />
+       </p>
+       <p class="website_event_data" id="e_data_10">
+        <t t-esc="event.website_published" />
+       </p>
+       <p class="website_event_data" id="e_data_11">
+        <t t-esc="event.organizer_id.id" />
+       </p>
+       <p class="website_event_data" id="e_data_12">
+        <t t-esc="event.organizer_id.name" />
+       </p>
+       <p class="website_event_data" id="e_data_13">
+        <t t-esc="event.with_context(tz=event.date_tz).date_begin" />
+       </p>
+       <p class="website_event_data" id="e_data_14">
+        <t t-esc="event.with_context(tz=event.date_tz).date_end" />
+       </p>
+       <p class="website_event_data" id="e_data_15">
+        <t t-esc="event.address_id.city" />
+       </p>
+       <p class="website_event_data" id="e_data_16">
+        <t t-esc="event.address_id.country_id.name" />
+       </p>
+       <p class="website_event_data" id="e_data_17">
+        <t t-esc="event.event_type_id.name" />
+       </p>
+       <p class="website_event_data" id="e_data_18">
+        <t t-esc="event.course_id.id" />
+       </p>
+       <p class="website_event_data" id="e_data_19">
+        <t t-esc="event.level_id.id" />
+       </p>
+       <p class="website_event_data" id="e_data_20">
+        <t t-esc="event.group_id.id" />
+       </p>
+      </li>
+     </t>
+    </ul>
+   </div>
+  </xpath>
+  <xpath expr="//ul[@class='list-unstyled']/li[1]/div/h4[1]"
+   position="inside">
+   <span itemprop="id" t-field="event.id" style="display: none;"
+    id="event_id">
+   </span>
+  </xpath>
+ </template>
+
+</odoo>

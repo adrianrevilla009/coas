@@ -1,0 +1,54 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* coas_education_website_contacts
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-25 13:09+0000\n"
+"PO-Revision-Date: 2020-06-25 13:09+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: coas_education_website_contacts
+#: model_terms:ir.ui.view,arch_db:coas_education_website_contacts.add_menu_contacts_item
+msgid "<i class=\"fa fa-envelope\"/>\n"
+"     <span class=\"sm-link__label\">Subjects / Contacts</span>"
+msgstr "<i class=\"fa fa-envelope\"/>\n"
+"     <span class=\"sm-link__label\">Contactos</span>"
+
+#. module: coas_education_website_contacts
+#: model_terms:ir.ui.view,arch_db:coas_education_website_contacts.coas_contacts_layout
+msgid "All contacts"
+msgstr "Todos los contactos"
+
+#. module: coas_education_website_contacts
+#: model_terms:ir.ui.view,arch_db:coas_education_website_contacts.coas_contacts_layout
+msgid "Contacts"
+msgstr "Contactos"
+
+#. module: coas_education_website_contacts
+#: model_terms:ir.ui.view,arch_db:coas_education_website_contacts.coas_contacts_layout
+msgid "Index"
+msgstr "Indice"
+
+#. module: coas_education_website_contacts
+#: model_terms:ir.ui.view,arch_db:coas_education_website_contacts.coas_contacts_layout
+msgid "No contacts found"
+msgstr "No se han encontrado contactos"
+
+#. module: coas_education_website_contacts
+#: model_terms:ir.ui.view,arch_db:coas_education_website_contacts.coas_contacts_layout
+msgid "No contacts found for all of your kids"
+msgstr "No se han encontrado contactos para ningún niño"
+
+#. module: coas_education_website_contacts
+#: model_terms:ir.ui.view,arch_db:coas_education_website_contacts.add_menu_contacts_item
+msgid "Subjects / Contacts"
+msgstr "Contactos"
+

@@ -1,0 +1,164 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* coas_education_website_routes
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-25 13:10+0000\n"
+"PO-Revision-Date: 2020-06-25 13:10+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.add_menu_routes_item
+msgid "<i class=\"fa fa-bus\"/>\n"
+"     <span class=\"sm-link__label\">Bus routes</span>"
+msgstr "<i class=\"fa fa-bus\"/>\n"
+"     <span class=\"sm-link__label\">Rutas de autobús</span>"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.add_menu_routes_item
+msgid "<i class=\"fa fa-paper-plane\"/>\n"
+"     <span class=\"sm-link__label\">Bus route issues</span>"
+msgstr "<i class=\"fa fa-paper-plane\"/>\n"
+"     <span class=\"sm-link__label\">Problemas en las rutas de autobús</span>"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_route_support_layout
+msgid "All route support"
+msgstr "Toda la información asociada a las rutas"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_routes_layout
+msgid "All routes"
+msgstr "Todas las rutas"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.add_menu_routes_item
+msgid "Bus route issues"
+msgstr "Problemas en las rutas de autobús"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.add_menu_routes_item
+msgid "Bus routes"
+msgstr "Rutas ed autobús"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_routes_layout
+msgid "Country"
+msgstr "País"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_routes_layout
+msgid "Estimated time"
+msgstr "Hora estimada"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_route_support_layout
+msgid "High Stop"
+msgstr "Parada de subida"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_route_support_layout
+msgid "High stop Route"
+msgstr "Ruta de la parada de subida"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_route_support_layout
+msgid "High stop direction"
+msgstr "Dirección de la parada de subida"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_route_support_layout
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_routes_layout
+msgid "Index"
+msgstr "Indice"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_route_support_layout
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_routes_layout
+msgid "Kid"
+msgstr "Niño"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_route_support_layout
+msgid "Low Stop"
+msgstr "Parada de bajada"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_route_support_layout
+msgid "Low stop Route"
+msgstr "Ruta de la parada de bajada"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_route_support_layout
+msgid "Low stop direction"
+msgstr "Dirección de la parada de bajada"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_route_support_layout
+msgid "Low stop type"
+msgstr "Tipo de parada de bajada"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_routes_layout
+msgid "Manager"
+msgstr "Responsable"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_route_support_layout
+msgid "No route issues found"
+msgstr "No se han encontrado problemas en las rutas de autobús"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_routes_layout
+msgid "No routes found"
+msgstr "No se han encontrado rutas de autobús"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_route_support_layout
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_routes_layout
+msgid "Notes"
+msgstr "Notas"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_routes_layout
+msgid "Route"
+msgstr "Ruta"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_route_support_layout
+msgid "Route support"
+msgstr "Información sobre las rutas"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_routes_layout
+msgid "Routes"
+msgstr "Rutas"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_routes_layout
+msgid "Stop"
+msgstr "Parada"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_routes_layout
+msgid "Street"
+msgstr "Calle"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_route_support_layout
+msgid "Time"
+msgstr "Tiempo"
+
+#. module: coas_education_website_routes
+#: model_terms:ir.ui.view,arch_db:coas_education_website_routes.coas_route_support_layout
+msgid "Type"
+msgstr "Tipo"
+

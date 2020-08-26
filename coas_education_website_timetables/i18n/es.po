@@ -1,0 +1,165 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* coas_education_website_timetables
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-25 13:10+0000\n"
+"PO-Revision-Date: 2020-06-25 13:10+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.add_menu_timetables_item
+msgid "<i class=\"fa fa-calendar\"/>\n"
+"     <span class=\"sm-link__label\">Timetables</span>"
+msgstr "<i class=\"fa fa-calendar\"/>\n"
+"     <span class=\"sm-link__label\">Horarios</span>"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Agenda"
+msgstr "Agenda"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "All timetables"
+msgstr "Todos los horarios"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Apr"
+msgstr "Abr"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Aug"
+msgstr "Ago"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Calendar"
+msgstr "Calendario"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Dec"
+msgstr "Dic"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Feb"
+msgstr "Feb"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Fri"
+msgstr "Vie"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Index"
+msgstr "Indice"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Jan"
+msgstr "Ene"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Jul"
+msgstr "Jul"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Jump To:"
+msgstr "Saltar a:"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Jun"
+msgstr "Jun"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Mar"
+msgstr "Mar"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "May"
+msgstr "May"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Mon"
+msgstr "Lun"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Next"
+msgstr "Siguiente"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "No timetables found"
+msgstr "No se han encontrado horarios"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Nov"
+msgstr "Nov"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Oct"
+msgstr "Oct"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Previous"
+msgstr "Anterior"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Sat"
+msgstr "Sáb"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Sep"
+msgstr "Sep"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Sun"
+msgstr "Dom"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Thu"
+msgstr "Jue"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.add_menu_timetables_item
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Timetables"
+msgstr "Horarios"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Tue"
+msgstr "Mar"
+
+#. module: coas_education_website_timetables
+#: model_terms:ir.ui.view,arch_db:coas_education_website_timetables.coas_timetables_layout
+msgid "Wed"
+msgstr "Mié"
+

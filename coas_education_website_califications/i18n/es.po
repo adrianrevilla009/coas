@@ -1,0 +1,125 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* coas_education_website_califications
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-25 13:08+0000\n"
+"PO-Revision-Date: 2020-06-25 13:08+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: coas_education_website_califications
+#: model_terms:ir.ui.view,arch_db:coas_education_website_califications.coas_califications_layout
+msgid "1 Evaluation"
+msgstr "Evaluación 1"
+
+#. module: coas_education_website_califications
+#: model_terms:ir.ui.view,arch_db:coas_education_website_califications.coas_califications_layout
+msgid "2 Evaluation"
+msgstr "Evaluación 2"
+
+#. module: coas_education_website_califications
+#: model_terms:ir.ui.view,arch_db:coas_education_website_califications.coas_califications_layout
+msgid "3 Evaluation"
+msgstr "Evaluación 3"
+
+#. module: coas_education_website_califications
+#: model_terms:ir.ui.view,arch_db:coas_education_website_califications.add_menu_califications_item
+msgid "<i class=\"fa fa-trophy\"/>\n"
+"     <span class=\"sm-link__label\">Califications</span>"
+msgstr "<i class=\"fa fa-trophy\"/>\n"
+"     <span class=\"sm-link__label\">Calificaciones</span>"
+
+#. module: coas_education_website_califications
+#: model_terms:ir.ui.view,arch_db:coas_education_website_califications.coas_califications_layout
+msgid "All califications"
+msgstr "Todas las calificaciones"
+
+#. module: coas_education_website_califications
+#: model_terms:ir.ui.view,arch_db:coas_education_website_califications.add_menu_califications_item
+#: model_terms:ir.ui.view,arch_db:coas_education_website_califications.coas_califications_layout
+msgid "Califications"
+msgstr "Calificaciones"
+
+#. module: coas_education_website_califications
+#: model_terms:ir.ui.view,arch_db:coas_education_website_califications.coas_califications_layout
+msgid "Competence"
+msgstr "Competencia"
+
+#. module: coas_education_website_califications
+#: model_terms:ir.ui.view,arch_db:coas_education_website_califications.coas_califications_layout
+msgid "Date"
+msgstr "Fecha"
+
+#. module: coas_education_website_califications
+#: model_terms:ir.ui.view,arch_db:coas_education_website_califications.coas_califications_layout
+msgid "Eval check"
+msgstr "Check de evaluación"
+
+#. module: coas_education_website_califications
+#: model_terms:ir.ui.view,arch_db:coas_education_website_califications.coas_califications_layout
+msgid "Evaluation"
+msgstr "Evaluación"
+
+#. module: coas_education_website_califications
+#: model_terms:ir.ui.view,arch_db:coas_education_website_califications.coas_califications_layout
+msgid "Global"
+msgstr "Global"
+
+#. module: coas_education_website_califications
+#: model_terms:ir.ui.view,arch_db:coas_education_website_califications.coas_califications_layout
+msgid "Global check"
+msgstr "Check global"
+
+#. module: coas_education_website_califications
+#: model_terms:ir.ui.view,arch_db:coas_education_website_califications.coas_califications_layout
+msgid "Index"
+msgstr "Indice"
+
+#. module: coas_education_website_califications
+#: model_terms:ir.ui.view,arch_db:coas_education_website_califications.coas_califications_layout
+msgid "Kid"
+msgstr "Niño"
+
+#. module: coas_education_website_califications
+#: model_terms:ir.ui.view,arch_db:coas_education_website_califications.coas_califications_layout
+msgid "Mark"
+msgstr "Nota"
+
+#. module: coas_education_website_califications
+#: model_terms:ir.ui.view,arch_db:coas_education_website_califications.coas_califications_layout
+msgid "N/E"
+msgstr "N/E"
+
+#. module: coas_education_website_califications
+#: model_terms:ir.ui.view,arch_db:coas_education_website_califications.coas_califications_layout
+msgid "Name"
+msgstr "Nombre"
+
+#. module: coas_education_website_califications
+#: model_terms:ir.ui.view,arch_db:coas_education_website_califications.coas_califications_layout
+msgid "No califications found"
+msgstr "No se han encontrado calificaciones"
+
+#. module: coas_education_website_califications
+#: model_terms:ir.ui.view,arch_db:coas_education_website_califications.coas_califications_layout
+msgid "Percent"
+msgstr "Porcentaje"
+
+#. module: coas_education_website_califications
+#: model_terms:ir.ui.view,arch_db:coas_education_website_califications.coas_califications_layout
+msgid "Subject"
+msgstr "Asignatura"
+
+#. module: coas_education_website_califications
+#: model_terms:ir.ui.view,arch_db:coas_education_website_califications.coas_califications_layout
+msgid "Teacher"
+msgstr "Profesor"
+

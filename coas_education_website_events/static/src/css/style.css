@@ -1,0 +1,21 @@
+#calendar-body>tr>td>div>button {
+	color: #FFFFFF;
+	background-color: #00A09D;
+	border-color: #00A09D;
+	border-radius: 0.25rem;
+	border: 1px solid transparent;
+	margin-bottom: 5px;
+}
+
+.swal-modal {
+	background-color: #00A09D;
+	border: 3px solid white;
+}
+
+.swal-overlay {
+	background-color: rgba(43, 165, 137, 0.45);
+}
+
+#event_filters > select {
+	margin: 0.5rem;
+}

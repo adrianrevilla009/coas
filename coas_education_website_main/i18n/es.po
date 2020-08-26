@@ -1,0 +1,63 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* coas_education_website_main
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-25 13:10+0000\n"
+"PO-Revision-Date: 2020-06-25 13:10+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: coas_education_website_main
+#: model_terms:ir.ui.view,arch_db:coas_education_website_main.coas_main_layout
+msgid "<i class=\"fa fa-file-word-o\"/>\n"
+"           <span class=\"sm-link__label\">Orders</span>"
+msgstr "<i class=\"fa fa-file-word-o\"/>\n"
+"           <span class=\"sm-link__label\">Pedidos de venta</span>"
+
+#. module: coas_education_website_main
+#: model_terms:ir.ui.view,arch_db:coas_education_website_main.coas_main_layout
+msgid "<i class=\"fa fa-newspaper-o\"/>\n"
+"           <span class=\"sm-link__label\">News</span>"
+msgstr "<i class=\"fa fa-newspaper-o\"/>\n"
+"           <span class=\"sm-link__label\">Noticias</span>"
+
+#. module: coas_education_website_main
+#: model_terms:ir.ui.view,arch_db:coas_education_website_main.coas_main_layout
+msgid "<i class=\"fa fa-paste\"/>\n"
+"           <span class=\"sm-link__label\">Invoices</span>"
+msgstr "<i class=\"fa fa-paste\"/>\n"
+"           <span class=\"sm-link__label\">Facturas</span>"
+
+#. module: coas_education_website_main
+#: model_terms:ir.ui.view,arch_db:coas_education_website_main.coas_main_layout
+msgid "Index"
+msgstr "Indice"
+
+#. module: coas_education_website_main
+#: model_terms:ir.ui.view,arch_db:coas_education_website_main.coas_main_layout
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: coas_education_website_main
+#: model:website.menu,name:coas_education_website_main.menu_home
+msgid "Main"
+msgstr "Educación"
+
+#. module: coas_education_website_main
+#: model_terms:ir.ui.view,arch_db:coas_education_website_main.coas_main_layout
+msgid "News"
+msgstr "Noticias"
+
+#. module: coas_education_website_main
+#: model_terms:ir.ui.view,arch_db:coas_education_website_main.coas_main_layout
+msgid "Orders"
+msgstr "Pedidos de venta"
+

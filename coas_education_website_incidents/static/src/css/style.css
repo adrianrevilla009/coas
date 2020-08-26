@@ -1,0 +1,30 @@
+#issues_filters>div {
+	padding-bottom: 2%;
+	padding-left: 15em;
+}
+
+#claims_filters>div {
+	padding-bottom: 2%;
+	padding-left: 15em;
+}
+
+#issues_filters>div>input {
+	margin-left: 5%;
+}
+
+#claims_filters>div>input {
+	margin-left: 5%;
+}
+
+#claim_table {
+	color: #6c757d !important;
+}
+
+#dis_tasks>div {
+	padding-bottom: 2%;
+	padding-left: 15em;
+}
+
+#date {
+	margin-right: 2%;
+}

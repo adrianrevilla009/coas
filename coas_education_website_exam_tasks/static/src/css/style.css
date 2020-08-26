@@ -1,0 +1,41 @@
+#nav_panel {
+	background-color: #e9ecef;
+	padding-right: 0;
+	padding-left: 0;
+	border-radius: 5px;
+}
+
+#nav_panel_task {
+	float: left;
+	border-radius: 5px;
+}
+
+#nav_panel_exam {
+	float: right;
+	border-radius: 5px;
+}
+
+#nav_panel a {
+	text-decoration: none;
+}
+
+#nav_panel a:hover {
+	color: #005452;
+}
+
+#nav_icon_task, #nav_icon_exam {
+	color: #00A09D;
+}
+
+.exam_event {
+	width: 100%;
+	line-height: normal;
+}
+
+#task_table_body>div>div>div>ul>li {
+	list-style-type: none;
+}
+
+#tasks_date {
+	margin-right: 2%;
+}

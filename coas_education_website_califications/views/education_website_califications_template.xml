@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+ <template id="assets_frontend"
+  inherit_id="website.assets_frontend" name="Adding files">
+  <xpath expr="." position="inside">
+   <script type="text/javascript"
+    src="/coas_education_website_califications/static/src/js/website.js"></script>
+   <link rel="stylesheet"
+    href="/coas_education_website_califications/static/src/css/style.css" />
+   <script type="text/javascript"
+    src="/coas_education_website_main/static/src/js/common.js"></script>
+   <link rel="stylesheet"
+    href="/coas_education_website_main/static/src/css/style.css" />
+  </xpath>
+ </template>
+
+ <template id="add_menu_califications_item"
+  inherit_id="coas_education_website_main.coas_main_layout"
+  name="Adding califications">
+  <xpath expr="//div[@id='middle_column']/div[1]/div[2]"
+   position="inside">
+   <t t-if="selected_kid">
+    <a
+     class="list-group-item list-group-item-action d-flex align-items-center justify-content-between sm-link sm-link_text sm-link7"
+     t-attf-href="/califications/{{selected_kid.id}}"
+     title="Califications">
+     <i class="fa fa-trophy"></i>
+     <span class="sm-link__label">Califications</span>
+     <span class="badge badge-secondary badge-pill">
+      <t t-esc="number_of_records" />
+     </span>
+    </a>
+   </t>
+   <t t-else="">
+    <a
+     class="list-group-item list-group-item-action d-flex align-items-center justify-content-between sm-link sm-link_text sm-link7"
+     t-attf-href="/califications/all" title="Califications">
+     <i class="fa fa-trophy"></i>
+     <span class="sm-link__label">Califications</span>
+     <span class="badge badge-secondary badge-pill">
+      <t t-esc="number_of_records" />
+     </span>
+    </a>
+   </t>
+  </xpath>
+ </template>
+
+ <template id="coas_califications_layout"
+  name="Califications Layout">
+  <t t-call="website.layout">
+   <xpath expr="//div[@id='wrap']" position="replace">
+    <div class="oe_structure"
+     id="oe_structure_website_event_index_1" />
+    <div class="container">
+     <!-- Browser -->
+     <div class="row mt8">
+      <div class="col-md-12">
+       <ol class="breadcrumb mb0">
+        <t t-if="selected_kid">
+         <li class="breadcrumb-item">
+          <a t-attf-href="/">Index</a>
+         </li>
+         <li class="breadcrumb-item">
+          <a t-attf-href="/main/{{selected_kid.id}}">Califications</a>
+         </li>
+         <li t-if="selected_kid" class="breadcrumb-item">
+          <t t-esc="selected_kid.name" />
+         </li>
+        </t>
+        <t t-else="">
+         <li class="breadcrumb-item">
+          <a t-attf-href="/">Index</a>
+         </li>
+         <li class="breadcrumb-item">
+          <a t-attf-href="/main">Califications</a>
+         </li>
+         <li class="breadcrumb-item">All califications</li>
+        </t>
+       </ol>
+      </div>
+     </div>
+     <div class="row mt32 mb32">
+      <!-- Left column -->
+      <div class="col-lg-3 css_noprint" id="left_column">
+       <ul class="nav nav-pills flex-column" id="kid_list">
+        <t t-foreach="kids" t-as="kid">
+         <li class="nav-item">
+          <a t-attf-href="/califications/{{kid.id}}"
+           t-attf-class="nav-link">
+           <i class="fa fa-user" style="margin-right: 5px;"></i>
+           <t t-esc="kid.name" />
+           <span class="badge badge-pill float-right"
+            style="display: none;">
+            <t t-esc="kid.id" />
+           </span>
+          </a>
+         </li>
+        </t>
+       </ul>
+      </div>
+      <!-- Central column -->
+      <div class="col-lg-9" id="middle_column">
+       <div class="text-center text-muted"
+        t-if="not education_record_ids">
+        <h1>No califications found</h1>
+       </div>
+       <div class="text-center text-muted" t-else="">
+        <div class="container">
+         <div class="row mt8">
+          <div class="col-md-12" style="background-color: #e9ecef;"
+           id="nav_panel">
+           <div class="col-md-3" id="nav_panel_1eval">
+            <i class="fa fa-calendar" id="nav_icon_1eval"></i>
+            <a t-attf-href="#" id="nav_href_1eval">1 Evaluation</a>
+           </div>
+           <div class="col-md-3" id="nav_panel_2eval">
+            <i class="fa fa-calendar" id="nav_icon_2eval"></i>
+            <a t-attf-href="#" id="nav_href_2eval">2 Evaluation</a>
+           </div>
+           <div class="col-md-3" id="nav_panel_3eval">
+            <i class="fa fa-calendar" id="nav_icon_3eval"></i>
+            <a t-attf-href="#" id="nav_href_3eval">3 Evaluation</a>
+           </div>
+           <div class="col-md-3" id="nav_panel_global">
+            <i class="fa fa-briefcase" id="nav_icon_global"></i>
+            <a t-attf-href="#" id="nav_href_global">Global</a>
+           </div>
+           <div class="col-md-4" id="nav_panel_all_califications">
+            <i class="fa fa-archive" id="nav_icon_all_califications"></i>
+            <a t-attf-href="#" id="nav_href_all_califications">All califications</a>
+           </div>
+          </div>
+         </div>
+         <div class="row mt8">
+          <select class="form-control col-sm-4"
+           name="califications_subject" id="califications_subject" />
+          <input class="btn btn-primary" type="button"
+           value="Evaluation marks" style="margin-left: 20px;"
+           id="evaluation_marks_button" />
+          <input class="btn btn-primary" type="button"
+           value="Competence marks" style="margin-left: 10px;"
+           id="competence_marks_button" />
+          <input class="btn btn-primary" type="button"
+           value="Exam marks" style="margin-left: 10px;"
+           id="exam_marks_button" />
+          <input class="btn btn-primary" type="button"
+           value="All marks" style="margin-left: 10px;"
+           id="all_marks_button" />
+         </div>
+         <br />
+         <div class="panel panel-default">
+          <div class="panel-body">
+           <table class="table" id="califications_table">
+            <thead>
+             <tr>
+              <th class="long-column">Kid</th>
+              <th class="short-column">Date</th>
+              <th class="long-column">Subject</th>
+              <th class="short-column">Name</th>
+              <th class="short-column">Percent</th>
+              <th class="long-column">Teacher</th>
+              <th class="short-column">Mark</th>
+              <th class="short-column" style="display: none;">Evaluation</th>
+              <th class="long-column" style="display: none;">Competence</th>
+              <th class="short-column" style="display: none;">Global check</th>
+              <th class="short-column" style="display: none;">Eval check</th>
+             </tr>
+            </thead>
+            <tbody id="califications_table_body">
+            </tbody>
+           </table>
+           <div style="display: none;">
+            <ul>
+             <t t-foreach="education_record_ids" t-as="record">
+              <t t-if="record.n_line_id">
+               <li>
+                <p>
+                 <t t-if="record.student_id">
+                  <t t-esc="record.student_id.name" />
+                 </t>
+                </p>
+
+                <p>
+                 <t t-if="record.date">
+                  <t t-esc="record.date" />
+                 </t>
+                </p>
+
+                <p>
+                 <t t-if="record.competence_id">
+                  <t t-esc="record.competence_id.name" />
+                 </t>
+                </p>
+
+                <p>
+                 <t t-if="record.exam_id">
+                  <t t-esc="record.exam_id.name" />
+                 </t>
+                </p>
+
+                <p>
+                 <t t-if="record.exam_eval_percent">
+                  <t t-esc="record.exam_eval_percent" />
+                 </t>
+                </p>
+
+                <p>
+                 <t t-if="record.teacher_id">
+                  <t t-esc="record.teacher_id.name" />
+                 </t>
+                </p>
+
+                <p>
+                 <t t-if="record.numeric_mark">
+                  <t t-esc="record.numeric_mark" />
+                 </t>
+                 <t t-else="">
+                  N/E
+                 </t>
+                </p>
+
+                <p>
+                 <t t-if="record.n_line_id">
+                  <t t-esc="record.n_line_id.eval_type" />
+                 </t>
+                </p>
+
+                <p>
+                 <t t-if="record.subject_id">
+                  <t t-esc="record.subject_id.display_name" />
+                 </t>
+                </p>
+
+                <p>
+                 <t t-if="record.competence_id">
+                  <t t-esc="record.competence_id.global_check" />
+                 </t>
+                </p>
+
+                <p>
+                 <t t-if="record.competence_id">
+                  <t t-esc="record.competence_id.evaluation_check" />
+                 </t>
+                </p>
+               </li>
+              </t>
+             </t>
+            </ul>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </xpath>
+  </t>
+ </template>
+
+</odoo>

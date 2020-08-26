@@ -1,0 +1,32 @@
+.media {
+	margin: 20px 0;
+	padding: 10px;
+	vertical-align: middle;
+	display: inline-block;
+	width: 100%;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+.media p {
+	margin: 0;
+}
+
+#contacts_data_body>span {
+	position: absolute;
+}
+
+#left_div>img {
+	border-radius: 50%;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+#kid_data {
+	text-align: left;
+}
+
+#kid_data>div>img {
+	border-radius: 80px;
+	width: 100px;
+}
