@@ -1,0 +1,30 @@
+h4 {
+	margin-left: 10px;
+}
+.red-title {
+	color: white;
+	background-color: #800000;
+	border: 2px solid black;
+}
+.red-text {
+	color: #800000;
+}
+.blue-title {
+	color: white;
+	background-color: #288BF3;
+	border: 2px solid black;
+}
+.blue-text {
+	color: #288BF3;
+}
+.green-title {
+	color: black;
+	background-color: green;
+	border: 2px solid black;
+}
+.comments {
+	height: 10rem; 
+}
+.address {
+	display: none;
+}

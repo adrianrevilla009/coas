@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- MENU -->
+    <report id="fleet_route_issue_report" string="Fleet Route Issue Report" model="fleet.route"
+        report_type="qweb-pdf" name="fleet_route_reports.fleet_route_issue_report_qweb"
+        file="fleet_route_reports.fleet_route_issue_report_qweb"
+        print_report_name="(object._get_report_base_filename())" />
+
+    <!-- TEMPLATE CONFIG -->
+    <template id="fleet_route_reports.fleet_route_issue_report_qweb">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="fleet_route_reports.fleet_route_issue_report_qweb_template"
+                    t-lang="doc.company_id.partner_id.sudo().lang" />
+            </t>
+        </t>
+    </template>
+
+    <!-- TEMPLATE CONTENT -->
+    <template id="fleet_route_issue_report_qweb_template">
+        <t t-name="fleet_route_issue_report_qweb_template">
+            <t t-call="web.external_layout">
+                <link rel="stylesheet" href="/fleet_route_reports/static/src/css/style.css" />
+                <div class="page">
+                    <div class="oe_structure" />
+                    <div class="row_fleet" style="margin-top: -0.25rem !important;">
+                        <h4>
+                            <b>
+                                <span>Students issues per route</span>
+                            </b>
+                        </h4>
+                    </div>
+                    <div class="row_fleet_table text-left mt-32">
+                        <b>
+                            Route:
+                            <span t-field="doc.name_id.name" />
+                        </b>
+                        <br />
+                        <b>
+                            Shift:
+                            <t t-if="doc.timetable">
+                                <span t-field="doc.timetable.display_name" />
+                            </t>
+                        </b>
+                    </div>
+                    <div class="row_fleet_table">
+                        <t t-foreach="doc.passenger_ids" t-as="passenger">
+                            <t t-if="doc._get_route_passenger_issues(passenger.id, doc.id, 'total') > 0">
+                                <div class="row_fleet_table mb-32">
+                                    <h5>
+                                        <b>
+                                            <span t-field="passenger.lastname" />
+                                            <span t-field="passenger.lastname2" />
+                                            ,
+                                            <span t-field="passenger.firstname" />
+                                        </b>
+                                    </h5>
+                                </div>
+                                <!-- High stop issues -->
+                                <t t-if="doc._get_route_passenger_issues(passenger.id, doc.id, 'high') > 0">
+                                    <div class="row_fleet_table text-left">
+                                        <b>* High stop issues</b>
+                                    </div>
+                                    <table class="table table-md o_main_table">
+                                        <thead>
+                                            <th></th>
+                                            <th>High stop</th>
+                                            <th>Direction</th>
+                                            <th>Date</th>
+                                            <th>Description</th>
+                                        </thead>
+                                        <tbody>
+                                            <t t-set="index" t-value="1" />
+                                            <t t-foreach="passenger.bus_issue_ids" t-as="issue">
+                                                <t
+                                                    t-if="issue.type == 'high' and doc.id == issue.high_stop_route_id.id">
+                                                    <tr>
+                                                        <td>
+                                                            <span t-esc="index" />
+                                                        </td>
+                                                        <td class="text-left">
+                                                            <span t-field="issue.high_stop_id.display_name" />
+                                                        </td>
+                                                        <td class="text-left">
+                                                            <span t-field="issue.high_stop_direction" />
+                                                        </td>
+                                                        <td class="text-left">
+                                                            <span t-field="issue.date" />
+                                                        </td>
+                                                        <td class="text-left">
+                                                            <span t-field="issue.notes" />
+                                                        </td>
+                                                    </tr>
+                                                    <t t-set="index" t-value="index+1" />
+                                                </t>
+                                            </t>
+                                        </tbody>
+                                    </table>
+                                </t>
+                                <!-- Low stop issues -->
+                                <t t-if="doc._get_route_passenger_issues(passenger.id, doc.id, 'low') > 0">
+                                    <div class="row_fleet_table text-left">
+                                        <b>* Low stop issues</b>
+                                    </div>
+                                    <table class="table table-md o_main_table">
+                                        <thead>
+                                            <th></th>
+                                            <th>Low stop</th>
+                                            <th>Direction</th>
+                                            <th>Date</th>
+                                            <th>Description</th>
+                                            <th>Type</th>
+                                        </thead>
+                                        <tbody>
+                                            <t t-set="index2" t-value="1" />
+                                            <t t-foreach="passenger.bus_issue_ids" t-as="issue2">
+                                                <t
+                                                    t-if="issue2.type == 'low' and doc.id == issue2.low_stop_route_id.id">
+                                                    <tr>
+                                                        <td>
+                                                            <span t-esc="index2" />
+                                                        </td>
+                                                        <td class="text-left">
+                                                            <span t-field="issue2.low_stop_id.display_name" />
+                                                        </td>
+                                                        <td class="text-left">
+                                                            <span t-field="issue2.low_stop_direction" />
+                                                        </td>
+                                                        <td class="text-left">
+                                                            <span t-field="issue2.date" />
+                                                        </td>
+                                                        <td class="text-left">
+                                                            <span t-field="issue2.notes" />
+                                                        </td>
+                                                        <t t-if="issue2.low_type">
+                                                            <td class="text-left">
+                                                                <span t-field="issue2.low_type" />
+                                                            </td>
+                                                        </t>
+                                                    </tr>
+                                                    <t t-set="index2" t-value="index2+1" />
+                                                </t>
+                                            </t>
+                                        </tbody>
+                                    </table>
+                                </t>
+                                <!-- Change stop issues -->
+                                <t t-if="doc._get_route_passenger_issues(passenger.id, doc.id, 'change') > 0">
+                                    <div class="row_fleet_table text-left">
+                                        <b>* Change stop issues</b>
+                                    </div>
+                                    <table class="table table-md o_main_table">
+                                        <thead>
+                                            <th></th>
+                                            <th>High stop</th>
+                                            <th>High stop direction</th>
+                                            <th>Low stop</th>
+                                            <th>Low stop direction</th>
+                                            <th>Date</th>
+                                            <th>Description</th>
+                                        </thead>
+                                        <tbody>
+                                            <t t-set="index3" t-value="1" />
+                                            <t t-foreach="passenger.bus_issue_ids" t-as="issue3">
+                                                <t
+                                                    t-if="issue3.type == 'change' and (doc.id == issue3.high_stop_route_id.id or doc.id == issue3.low_stop_route_id.id)">
+                                                    <tr>
+                                                        <td>
+                                                            <span t-esc="index3" />
+                                                        </td>
+                                                        <td class="text-left">
+                                                            <span t-field="issue3.high_stop_id.display_name" />
+                                                        </td>
+                                                        <td class="text-left">
+                                                            <span t-field="issue3.high_stop_direction" />
+                                                        </td>
+                                                        <td class="text-left">
+                                                            <span t-field="issue3.low_stop_id.display_name" />
+                                                        </td>
+                                                        <td class="text-left">
+                                                            <span t-field="issue3.low_stop_direction" />
+                                                        </td>
+                                                        <td class="text-left">
+                                                            <span t-field="issue3.date" />
+                                                        </td>
+                                                        <td class="text-left">
+                                                            <span t-field="issue3.notes" />
+                                                        </td>
+                                                    </tr>
+                                                </t>
+                                            </t>
+                                        </tbody>
+                                    </table>
+                                </t>
+                            </t>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
